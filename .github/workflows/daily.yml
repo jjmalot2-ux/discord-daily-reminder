@@ -9,10 +9,10 @@ jobs:
   send-message:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Daily Reminder
+      - name: Send to Discord Groups
         env:
-          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          WEBHOOK_2: ${{ secrets.DISCORD_WEBHOOK_URL_2 }}
         run: |
-          curl -fS -H "Content-Type: application/json" \
-            -d '{"content":"🔔 น้องโก้ะดื่มนมด้วยจ้าาา 🥛💕"}' \
-            "$WEBHOOK_URL"
+          MESSAGE='{"content":"🔔 น้องโก้ะดื่มนมด้วยจ้าาา 🥛💕"}'
+          
+          curl -fS -H "Content-Type: application/json" -d "$MESSAGE" "$WEBHOOK_2"
