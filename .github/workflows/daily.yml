@@ -13,6 +13,6 @@ jobs:
         env:
           WEBHOOK_2: ${{ secrets.DISCORD_WEBHOOK_URL_2 }}
         run: |
-          MESSAGE='{"content":"🔔 น้องโก้ะดื่มนมด้วยจ้าาา 🥛💕"}'
+          MESSAGE='{"content":"🔔 น้องโก้ะดื่มนมด้วยจ้า ก่อนเข้าดิสคอร์ด กรุณาถ่ายรูปส่งมาเป็นหลักฐานเพื่อที่จะให้พี่ๆได้รับทราบ 🥛💕"}'
           
           curl -fS -H "Content-Type: application/json" -d "$MESSAGE" "$WEBHOOK_2"
